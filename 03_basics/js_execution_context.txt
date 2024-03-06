@@ -1,0 +1,35 @@
+Types of Execution Context
+
+Global Execution Context
+Functional Execution Context
+Eval Execution Context
+
+
+Memory Creation phase
+Execution phase
+
+let val1 = 10
+let val2 = 5
+
+function addNum(num1,num2){
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1,val2)
+let result2 = addNum(20,45)
+
+1.Global Execution Context
+1.1 Memory phase
+1.2 Execution phase
+In Memory phase
+    val1 ->undefined
+    val2 ->undefined
+    addNum ->defination
+    result1 ->undefined
+    result2 ->undefined
+In Execution phase
+    val1 ->10
+    val2 ->5
+    addNum ->   New Variable + Environment + Execution thread and Also it will delete this new Execution Context
+    result1 = 15
+    result2 = Now it will again create another local Execution context nd in 
