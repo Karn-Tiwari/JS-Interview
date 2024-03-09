@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: aquamarine">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+      <div class="day">Friday</div>
+      <div class="day">Saturday</div>
+      <div class="day">Sunday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent);// isme HTML collection milega jisme bht sare children honge
+    // console.log(parent.children); // isme milega HTMLCollection jo array jaisa hota hai lagbagh
+    // console.log(parent.children[0].innerHTML); // isse pehla element milega = Monday
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+    }
+    parent.children[0].style.color = "red";
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector(".day");
+    console.log(dayOne); // agar kisi element pe hai to uske parent pe agar jana chahe to bina queryselector chalaye jaa sakate hai kuki pori tree ko traverse karna expensive operation hai
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+
+    console.log("NODES:", parent.childNodes); // ye nodes dega including text nodes
+  </script>
+</html>
