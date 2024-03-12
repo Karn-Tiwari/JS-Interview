@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    const div = document.createElement("div");
+    div.className = "container";
+    div.style.backgroundColor = "red";
+    div.style.width = "100px";
+    div.style.height = "100px";
+    div.style.color = "white";
+    //div.innerText="Karn Tiwari with code"
+    //div.setAttribute( "title", "Main jyada optimise hu comparision to innerText ye seedhe overWrite karta hai");
+    const addText = document.createTextNode("Karn Tiwari with code");
+    div.appendChild(addText);
+    document.body.appendChild(div);
+  </script>
+</html>
+
+<!-- CREATING ELEMENT IN WEB PAGE USING JAVASCRIPT
+const div = document.createElement("div")
+div.className = "main"
+const addText = documentn.createTextNode("Karn Tiwrai with code")
+div.appendChild(addText)
+document.body.appendChild(div) -->
