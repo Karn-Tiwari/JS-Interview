@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Karn Tiwari chay k sath code</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Hi boyz";
+    };
+    const changeMe = setTimeout(changeText, 2000);
+    // clearTimeout konse wale setTimeout pe lagana hai aur kitne time k liye lagana hai to iske liye uss settimeout ka referce chahiye hota hai aur usse reference ko clearTimeout me pass karna hota hai
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe);
+      console.log("stopped");
+    });
+  </script>
+</html>
